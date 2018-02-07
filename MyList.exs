@@ -1,4 +1,18 @@
 defmodule MyList do
+  @moduledoc """
+  Provides List-related functions
+
+  ## Examples
+
+      iex> MyList.len([1,2,3])
+      3
+
+      iex> Mylist.reduce([1,2,3], 0, &(&1 + &2))
+      6
+
+      
+  """
+
 
   def len([]),                  do: 0
   def len([_head | tail]),      do: 1 + len(tail)
