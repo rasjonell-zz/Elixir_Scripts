@@ -23,7 +23,7 @@ First start interactive Elixir shell ```iex -S mix```.
 
 To initiate worker process type
 
-```
+```elixir
 iex> Cache.start_link
 {:ok, #PID<0.121.0>} # The PID may differ
 ```
@@ -32,7 +32,7 @@ iex> Cache.start_link
 
 You can add any valid Elixir Data Type to your Cache-Server.
 
-```
+```elixir
 iex> Cache.write(:some_list, ["Test", :list_item])
 :ok
 
@@ -47,7 +47,7 @@ iex> Cache.read(:some_list)
 
 You can delete any item in Cache-Server state. (```exists?/1``` checks if the given key is in the state or not)
 
-```
+```elixir
 iex> Cache.delete(:some_list)
 :ok
 
@@ -59,7 +59,7 @@ false
 
 To reset the state of the process you can use `clear/0`. (```get/0``` returns the state of the process)
 
-```
+```elixir
 iex> Cache.get
 %{1 => "one"}
 
